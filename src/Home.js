@@ -14,7 +14,6 @@ import Privacy from "./Privacy";
 import Terms from "./Terms";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
-import ForgotPassword from "./ForgotPassword";
 
 function App() {
   return (
@@ -34,9 +33,6 @@ function App() {
         </Route>
         <Route path="/privacy">
           <Privacy />
-        </Route>
-        <Route path="/forgotpassword">
-          <ForgotPassword />
         </Route>
       </Switch>
     </Router>
