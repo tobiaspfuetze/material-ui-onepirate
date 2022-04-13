@@ -3,15 +3,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-import TextField from '../components/TextField';
 import { Link } from "react-router-dom";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 function Copyright() {
   return (
     <React.Fragment>
       {'© '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link to={"/"}>
+        Bobo's Website
       </Link>{' '}
       {new Date().getFullYear()}
     </React.Fragment>
@@ -59,18 +60,25 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(1),
     width: 150,
   },
+  footerTop: {
+    [theme.breakpoints.up('xs')]: {
+      marginTop: theme.spacing(20), 
+      },
+      [theme.breakpoints.up('md')]: {
+        marginTop: theme.spacing(0), 
+        },
+      
+  },
+  footerTop2: {
+    [theme.breakpoints.up('xs')]: {
+      marginTop: theme.spacing(-21.5), 
+      },
+      [theme.breakpoints.up('md')]: {
+        marginTop: theme.spacing(0), 
+        },
+  },
 }));
 
-const LANGUAGES = [
-  {
-    code: 'en-US',
-    name: 'English',
-  },
-  {
-    code: 'fr-FR',
-    name: 'Français',
-  },
-];
 
 export default function AppFooter() {
   const classes = useStyles();
@@ -79,7 +87,7 @@ export default function AppFooter() {
     <Typography component="footer" className={classes.root}>
       <Container className={classes.container}>
         <Grid container spacing={5}>
-          <Grid item xs={6} sm={4} md={3}>
+          <Grid item xs={3} sm={4} md={3}>
             <Grid
               container
               direction="column"
@@ -88,70 +96,45 @@ export default function AppFooter() {
               spacing={2}
             >
               <Grid item className={classes.icons}>
-                <a href="https://material-ui.com/" className={classes.icon}>
+                <a href="https://www.facebook.com/profile.php?id=100005652198196" className={classes.icon}>
                   <img src="/appFooterFacebook.png" alt="Facebook" />
                 </a>
-                <a href="https://twitter.com/MaterialUI" className={classes.icon}>
+                <a href="https://twitter.com/choi_bobo" className={classes.icon}>
                   <img src="/appFooterTwitter.png" alt="Twitter" />
                 </a>
+               
+                <Link to={{ pathname: "https://www.instagram.com/bobo0122choi/" }} target="_blank" className={classes.icon}> 
+                  <InstagramIcon/>
+                </Link>
+                <Link to={{ pathname: "https://www.youtube.com/channel/UClnpxFdTM-SO0LS9nBWq-V/" }} target="_blank" className={classes.icon}> 
+                <YouTubeIcon/>
+                </Link>
+                  
               </Grid>
               <Grid item>
                 <Copyright />
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Legal
+          <Grid item xs={3} sm={4} md={3} >
+            <Typography variant="h6" marked="left" gutterBottom className={classes.footerTop}>
+              Contact
             </Typography>
             <ul className={classes.list}>
               <li className={classes.listItem}>
-                <Link to={"/terms"}>Terms</Link>
+              <a href="mailto:bobo0122choi@gmail.com">Email Bobo</a>
               </li>
               <li className={classes.listItem}>
-                <Link to={"/privacy"}>Privacy</Link>
+              <a href="https://www.instagram.com/bobo0122choi/">DM Bobo</a>
+              </li>
+              <li className={classes.listItem}>
+                <a href="https://www.linkedin.com/in/bobo-choi/">Bobo's LinkedIn Profile</a>
               </li>
             </ul>
+         
+         
           </Grid>
-          <Grid item xs={6} sm={8} md={4}>
-            <Typography variant="h6" marked="left" gutterBottom>
-              Language
-            </Typography>
-            <TextField
-              select
-              SelectProps={{
-                native: true,
-              }}
-              className={classes.language}
-            >
-              {LANGUAGES.map((language) => (
-                <option value={language.code} key={language.code}>
-                  {language.name}
-                </option>
-              ))}
-            </TextField>
-          </Grid>
-          <Grid item>
-            <Typography variant="caption">
-              {'Icons made by '}
-              <Link href="https://www.freepik.com" rel="sponsored" title="Freepik">
-                Freepik
-              </Link>
-              {' from '}
-              <Link href="https://www.flaticon.com" rel="sponsored" title="Flaticon">
-                www.flaticon.com
-              </Link>
-              {' is licensed by '}
-              <Link
-                href="https://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC 3.0 BY
-              </Link>
-            </Typography>
-          </Grid>
+      
         </Grid>
       </Container>
     </Typography>

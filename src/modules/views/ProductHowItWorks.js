@@ -64,7 +64,7 @@ function ProductHowItWorks(props) {
           alt="curvy lines"
         />
         <Typography variant="h4" marked="center" className={classes.title} component="h2">
-          How it works
+          How to Mint your own NFT
         </Typography>
         <div>
           <Grid container spacing={5}>
@@ -77,7 +77,7 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  Appointment every Wednesday 9am.
+                 Go to Opensea.io and click on the "Create" button. Sign in with your preferred crypto/NFT wallet.
                 </Typography>
               </div>
             </Grid>
@@ -90,7 +90,7 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  First come, first served. Our offers are in limited quantities, so be quick.
+                  Upload your artwork and give it a cool name.
                 </Typography>
               </div>
             </Grid>
@@ -103,24 +103,22 @@ function ProductHowItWorks(props) {
                   className={classes.image}
                 />
                 <Typography variant="h5" align="center">
-                  {'New offers every week. New experiences, new surprises. '}
-                  {'Your Sundays will no longer be alike.'}
+                  {'Change the blockchain to Polygon main net, and hit create. Voilà, you just minted your first NFT!'}
                 </Typography>
               </div>
             </Grid>
           </Grid>
         </div>
-        <Link to={"/signup"}>
         <Button
           color="secondary"
           size="large"
           variant="contained"
           className={classes.button}
           component="a"
+          href="https://opensea.io/"
         >
-          Get started
+Get started
         </Button>
-        </Link>
       </Container>
     </section>
   );

@@ -53,8 +53,9 @@ const styles = (theme) => ({
     left: -28,
     right: 0,
     bottom: 0,
-    width: '100%',
+    width: '90%',
     maxWidth: 600,
+    height:'90%'
   },
 });
 
@@ -94,7 +95,7 @@ function ProductCTA(props) {
           <Hidden smDown>
             <div className={classes.imageDots} />
             <img
-              src="https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=750&q=80"
+              src="./bobologo.jpg"
               alt="call to action"
               className={classes.image}
             />

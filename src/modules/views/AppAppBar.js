@@ -9,8 +9,23 @@ import { Typography } from "@material-ui/core";
 
 const styles = (theme) => ({
   title: {
-    fontSize: 24,
-    color: theme.palette.common.white,
+    
+    [theme.breakpoints.up('xs')]: {
+      fontSize: 10,
+      color: theme.palette.common.white,
+      marginLeft: theme.spacing(0.1),
+  
+      },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 14,
+      color: theme.palette.common.white,
+      marginLeft: theme.spacing(2),
+  
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: 24,
+        color: theme.palette.common.white,
+      },
   },
   placeholder: toolbarStyles(theme).root,
   toolbar: {
@@ -26,11 +41,30 @@ const styles = (theme) => ({
     flex: 1,
     display: "flex",
     justifyContent: "flex-end",
+    
   },
   rightLink: {
-    fontSize: 16,
+      
+    [theme.breakpoints.up('xs')]: {
+      fontSize: 8,
+      color: theme.palette.common.white,
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(0.5),
+      padding: theme.spacing(0.6),
+      },
+    [theme.breakpoints.up('sm')]: {
+    fontSize: 11,
+    color: theme.palette.common.white,
+    marginLeft: theme.spacing(2),
+
+
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 16,
     color: theme.palette.common.white,
     marginLeft: theme.spacing(3),
+    },
+   
   },
   linkSecondary: {
     color: theme.palette.secondary.main,
@@ -44,18 +78,46 @@ function AppAppBar(props) {
     <div>
       <AppBar position="fixed">
         <Toolbar className={classes.toolbar}>
-          <div className={classes.left} />
-          <Link to={"/"}>
+        <Link to={"/"}>
             <Typography
               variant="h6"
               underline="none"
               color="inherit"
               className={classes.title}
             >
-              {"onepirate"}
+              {"bobo choi"}
             </Typography>
           </Link>
           <div className={classes.right}>
+          <Link to={"/signup"}>
+            <Typography
+              variant="h6"
+              underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+            >
+              {"BYU MISM"}
+            </Typography>
+            </Link> 
+            <Link to={"/signup"}>
+            <Typography
+              variant="h6"
+              underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+            >
+              {"freelance model"}
+            </Typography>
+            </Link>
+            <Link to={"/signup"}>
+            <Typography
+              variant="h6"
+              underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+            >
+              {"Software Engineer"}
+            </Typography>
+            </Link>
+        
+         
             <Link to={"/signin"}>
               <Typography
                 color="inherit"
@@ -63,7 +125,7 @@ function AppAppBar(props) {
                 underline="none"
                 className={classes.rightLink}
               >
-                {"Sign In"}
+                {"NFT Artist"}
               </Typography>
             </Link>
             <Link to={"/signup"}>
@@ -72,9 +134,20 @@ function AppAppBar(props) {
               underline="none"
               className={clsx(classes.rightLink, classes.linkSecondary)}
             >
-              {"Sign Up"}
+              {"Singer"}
             </Typography>
             </Link>
+            
+            <Link to={"/signup"}>
+            <Typography
+              variant="h6"
+              underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+            >
+              {"food critic"}
+            </Typography>
+            </Link>
+                   
           </div>
         </Toolbar>
       </AppBar>

@@ -57,11 +57,11 @@ function ProductValues(props) {
                 alt="suitcase"
               />
               <Typography variant="h6" className={classes.title}>
-                The best luxury hotels
+                Driven
               </Typography>
               <Typography variant="h5">
-                {'From the latest trendy boutique hotel to the iconic palace with XXL pool'}
-                {', go for a mini-vacation just a few subway stops away from your home.'}
+                {'From a very young age, I grew up always striving to be the very best in all that I do.'}
+                {' "Excellence is not an option...It is expected" is a quote I live by'}
               </Typography>
             </div>
           </Grid>
@@ -73,11 +73,11 @@ function ProductValues(props) {
                 alt="graph"
               />
               <Typography variant="h6" className={classes.title}>
-                New experiences
+              Trilingual
               </Typography>
               <Typography variant="h5">
-                {'Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… '}
-                {'your Sundays will not be alike.'}
+                {''}
+                {'I was fortunate to spend my childhood in Korea and China. I picked up all the languages along the way, and I am now fluent in Mandarin Chinese, Korean, and English '}
               </Typography>
             </div>
           </Grid>
@@ -89,11 +89,11 @@ function ProductValues(props) {
                 alt="clock"
               />
               <Typography variant="h6" className={classes.title}>
-                Exclusive rates
+                 Innovative
               </Typography>
               <Typography variant="h5">
-                {'By registering, you will access specially negotiated rates '}
-                {'that you will not find anywhere else.'}
+                {'Since 2016, I started trading crypto and immersed myself in the extended reality world. Now I am actively engaged in crypto trading and own some properties in the metaverse. '}
+                {''}
               </Typography>
             </div>
           </Grid>
